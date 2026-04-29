@@ -1,6 +1,6 @@
 FROM python:3.11-slim
 
-WORKDIR /app
+#WORKDIR /app
 
 # Instala dependências de sistema (se o seu script precisar de bibliotecas C, como para bancos de dados)
 RUN apt-get update && apt-get install -y --no-install-recommends \
