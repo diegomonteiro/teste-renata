@@ -1,6 +1,7 @@
 FROM pdal/pdal:latest
 
 WORKDIR /app
+ENV PYTHONPATH=/app
 
 COPY requirements.txt .
 

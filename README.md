@@ -14,6 +14,8 @@ docker compose up --build
 
 Acesse: `http://localhost:9090`
 
+Nota para Portainer: não use bind mount `.:/app` em produção, pois isso pode sobrescrever o código da imagem e gerar `ModuleNotFoundError: No module named 'app'`.
+
 ## Executar localmente
 
 Pré-requisitos:

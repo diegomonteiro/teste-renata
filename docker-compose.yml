@@ -4,9 +4,16 @@ services:
     container_name: laz_web_processor
     restart: unless-stopped
     volumes:
-      - .:/app
+      - app_data:/app/app/data
+      - app_uploads:/app/app/uploads
+      - app_outputs:/app/app/outputs
     ports:
       - "9090:9090"
     environment:
       - PYTHONUNBUFFERED=1
       - APP_ENV=production
+
+volumes:
+  app_data:
+  app_uploads:
+  app_outputs:
