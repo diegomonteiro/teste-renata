@@ -1,18 +1,12 @@
 services:
   python-app:
     build: .
-    container_name: meu_script_python
-    # Reinicia o contêiner automaticamente em caso de falha
+    container_name: laz_web_processor
     restart: unless-stopped
     volumes:
       - .:/app
+    ports:
+      - "8000:8000"
     environment:
       - PYTHONUNBUFFERED=1
       - APP_ENV=production
-    # Se o script precisar rodar em uma rede específica ou conectar a um banco
-    # networks:
-    #   - minha_rede
-
-# networks:
-#   minha_rede:
-#     driver: bridge

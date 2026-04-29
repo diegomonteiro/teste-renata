@@ -1,3 +1,4 @@
-print("Teste da Renata")
+import uvicorn
 
-print(f"Teste de Conta: {1 + 2}")
+if __name__ == "__main__":
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=False)
